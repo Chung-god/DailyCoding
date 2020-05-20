@@ -5,6 +5,7 @@
 
 int main()
 {
+    /*
     int n;
     char c[10];
     scanf("%d.", &n);
@@ -14,6 +15,9 @@ int main()
     for (i = 0;c[i] != '\0';i++) {
         printf("%c", c[i]);
     }
+    */
+    
+
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
