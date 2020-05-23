@@ -27,4 +27,13 @@ int main() {
 			printf("%d ", i);
 		}
 	}*/
+
+	/*1089
+	int a, d, n, i;
+	scanf_s("%d%d%d", &a, &d, &n);
+	int num = a;
+	for (i = 0; i < n-1; i++) {
+		num += d;
+	}
+	printf("%d", num);*/
 }
