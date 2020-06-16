@@ -4,6 +4,7 @@
 using namespace std;
 
 int N, M;
+int b; //그전 값
 int arr[MAX];
 bool visited[MAX];
 
@@ -17,19 +18,17 @@ void dfs(int cnt, int b) {
     }
     else {
         for (int i = 1; i <= N; i++) {
-            if (visited[i])
-                continue;
-            else if (i < b)
-                continue;
-            else {
-                visited[i] = true;
-                arr[cnt] = i;
-                dfs(cnt + 1, i);
-                arr[cnt] = 0;
-                visited[i] = false;
+            if (!visited[i]) {//방문하지 않았을때
+                if (b < i) {
+                    visited[i] = true;
+                    arr[cnt] = i;
+                    b = i;
+                    dfs(cnt + 1, b);
+                    visited[i] = false;
+                    
+                }
             }
         }
-
     }
     
     return;
@@ -40,6 +39,6 @@ void dfs(int cnt, int b) {
 int main()
 {
     cin >> N >> M;
-    dfs(1, 0);
+    dfs(0, 0);
     return 0;
 }
