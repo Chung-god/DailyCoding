@@ -9,7 +9,7 @@ int arr[MAX] = { 0,0,0,0,0,0,0,0 };
 //bool visited[MAX];
 
 
-void dfs(int cnt, int b){
+void dfs(int cnt, int b) {
     n = 0;
     if (cnt == M) {
         for (int i = 0; i < M; i++) {
@@ -21,7 +21,7 @@ void dfs(int cnt, int b){
         for (int i = 1; i <= N; i++) {
             if (i < b) continue;
             arr[cnt] = i;
-            dfs(cnt + 1,i);
+            dfs(cnt + 1, i);
         }
     }
     return;
@@ -32,6 +32,6 @@ void dfs(int cnt, int b){
 int main()
 {
     cin >> N >> M;
-    dfs(0,0);
+    dfs(0, 0);
     return 0;
 }
