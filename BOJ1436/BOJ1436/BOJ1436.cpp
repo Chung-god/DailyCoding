@@ -9,7 +9,6 @@ int main()
 	int n;
 	cin >> n;
 	vector<int> v;
-	int th = 1;
 	bool on = false;
 	for (int j = 666; ; j++) {
 		int i = j;
